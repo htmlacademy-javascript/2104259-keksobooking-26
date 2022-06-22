@@ -1,20 +1,20 @@
 function getRandomIntInclusive(min, max) {
-  if(min < 0 || max <= min){
-    throw new Error('Ошибка!');
-  }else {
+  if(min >= 0 && max > min){
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
+  }else {
+    throw new Error('Ошибка!');
   }
 }
 
 getRandomIntInclusive(0, 10);
 
-function getRandomNumber(min, max, legth){
-  if(min < 0 || max <= min){
-    throw new Error('Ошибка! 2');
+function getRandomNumber(min, max, length){
+  if(min >= 0 && max > min){
+    return Number((Math.random() * (max - min) + min).toFixed(length));
   }else {
-    return (Math.random() * (max - min) + min).toFixed(legth);
+    throw new Error('Ошибка!');
   }
 }
 
