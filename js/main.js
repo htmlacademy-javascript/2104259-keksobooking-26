@@ -1,2 +1,1 @@
-import { similarAds } from './similar-ads.js';
-similarAds();
+import './generation-similar-elements.js';
